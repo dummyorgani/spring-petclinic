@@ -2,4 +2,8 @@ node {
     stage('scm'){
         git 'https://github.com/dummyorgani/spring-petclinic.git'
     }
+    stage('build'){
+        sh 'sh mvn package'
+    }
 }
+
